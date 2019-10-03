@@ -1,0 +1,136 @@
+
+#sizechartbox{
+      width: 400px;
+    margin: 0px auto;
+}
+
+
+
+#sizechartbutton {
+    position: absolute;
+    top: 36px;
+    right: 16px;
+    z-index: 10;
+}
+
+/*
+#cboxClose{
+    padding: 0 30px 0 10px; 
+}
+*/
+
+#sizechart {
+    color: #2d3331; //max-width: 700px;
+}
+
+#sizechart .left-column {
+    float: left; //  max-width: 375px;
+}
+
+#sizechart .right-column {
+    float: right;
+    width: 150px;
+}
+
+#sizechart_form label {
+    clear: both;
+    width: 100%;
+}
+
+#sizechart table tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+#sizechart #chart_values tr.recomended-size {
+    background-color: #a1a1a1;
+}
+
+#sizechart table td {
+    border: 1px solid #eeeeee;
+    line-height: 20px;
+}
+
+#sizechart #chart_values td.current {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#sizechart table th {
+    border: 1px solid #ffffff;
+    padding: 4px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 15px;
+}
+
+#sizechart .size {
+    clear: both;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+
+#sizechart .measurements table {
+    width: 100%; //   float: left;
+    //   width: 48%;
+}
+
+#sizechart .measurements table td {
+    border: 0;
+    padding: 4px 15px;
+    text-align: center;
+}
+
+#sizechart .measurements input {
+    width: 56px;
+}
+
+#sizechart .measurements p {
+    margin: 0;
+}
+
+#sizechart .measurements .col {
+    // width: 55px;
+    //  float: left;
+}
+
+#sizechart .results {
+    // width: 48%;
+    // float: right;
+    background-color: #ffffaa;
+    padding: 5px;
+}
+
+#sizechart .results p {
+    margin: 0;
+    padding: 5px;
+}
+
+#sizechart .chart table {
+    width: 100%;
+    text-align: center;
+}
+
+#sizechart .chart td {
+    text-align: center;
+}
+
+#sizechart .country table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#sizechart .country td {
+    text-align: center;
+}
+
+#sizechart .notes {
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.sizechart-credits {
+    clear: both;
+    float: left;
+    font-size: 8px;
+}

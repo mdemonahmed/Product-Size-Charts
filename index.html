@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Size Chart</title>
+<meta name="description" content="Advanced Product Size Charts" />
+<meta name="keywords" content="E-commerce, Product, Size, Charts, Product size charts" />
+<link rel="stylesheet" type="text/css" href="skin/sizechart.css" media="all" />
+<script type="text/javascript" src="js/prototype/prototype.js"></script>
+<script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery/noconflict.js"></script>
+<script type="text/javascript" src="js/prototype/validation.js"></script>
+<script type="text/javascript" src="js/sizechart/sizechart.js"></script>
+<script type="text/javascript" src="js/sizechart/jquery.fancybox.pack.js"></script>
+</head>
+<body>                                    
+<div id="sizechartbox">
+    <div id="sizechart">
+        <div>
+            <h2>Size Chart</h2>
+        </div>
+        <div class="left-column" style="width: 375px">
+            <div class="size">
+                <div class="measurements">
+                    <p>Find your size for this dress:</p>
+                    <form id="sizechart_form" name="sizechart_form">
+                        <table>
+                            <tr>
+                                <td><label for="bust">Bust:</label><br /><input name="bust" value="" type="text" size="3" id="bust" /></td>
+                                <td><label for="waist">Waist:</label><br /><input name="waist" value="" type="text" size="3" id="waist" /></td>
+                                <td><label for="hip">Hip:</label><br /><input name="hip" value="" type="text" size="3" id="hip" /></td>
+                            </tr>
+                        </table>
+                    </form>
+                    <p><a href="#" id="convertsizeunits">Convert to Centimeters</a></p>
+                </div>
+                <div class="results">
+                    <p>Based on your measurements we recommend ordering size <strong id="size-value"></strong></p>
+                </div>
+            </div>
+            <div class="chart">
+                <table>
+                    <thead id="chart_head" style="background-color: #3399CC">
+                        <tr><th>Size</th><th>Bust</th><th>Waist</th><th>Hips</th></tr>                    </thead>
+                    <tbody id="chart_values">
+                        <tr><td>0</td><td>32</td><td>24.5</td><td>35.5</td></tr><tr><td>2</td><td>33</td><td>25.5</td><td>36.5</td></tr><tr><td>4</td><td>34</td><td>26.5</td><td>37.5</td></tr><tr><td>6</td><td>35</td><td>27.5</td><td>38.5</td></tr><tr><td>8</td><td>36</td><td>28.5</td><td>39.5</td></tr><tr><td>10</td><td>37</td><td>29.5</td><td>40.5</td></tr><tr><td>12</td><td>38.5</td><td>31</td><td>42</td></tr><tr><td>14</td><td>40</td><td>32.5</td><td>43.5</td></tr><tr><td>16</td><td>42</td><td>34.5</td><td>45.5</td></tr><tr><td>18</td><td>44</td><td>36.5</td><td>47.5</td></tr><tr><td>20</td><td>46</td><td>39</td><td>49.5</td></tr><tr><td>22</td><td>48.5</td><td>41.5</td><td>52</td></tr><tr><td>24</td><td>51</td><td>44</td><td>54.5</td></tr><tr><td>26</td><td>53.5</td><td>47</td><td>57</td></tr>                    
+                    </tbody>
+
+                 </table>
+             </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    document.observe("dom:loaded", function () {
+        jQuery("#sizechartbutton").fancybox();
+        var sizeChartObject = new sizeChart('sizechart_form');
+        $('convertsizeunits').on('click', function (event) {
+            sizeChartObject.changeUnits();
+            Event.stop(event);
+        });
+        new Form.Observer('sizechart_form', 0.5, function () {
+            sizeChartObject.findSize();
+        });
+    });
+</script>                
+</body>
+</html>
+
